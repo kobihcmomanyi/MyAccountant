@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="secondary_color" type="color">#363644</item>
+    <item name="primary_color" type="color">#494954</item>
+    <item name="fab_color" type="color">#6440c1</item>
+    <item name="red" type="color">#c27f82</item>
+    <item name="white" type="color">#f2f2f3</item>
+    <item name="gray" type="color">#a2a2a7</item>
+    <item name="green" type="color">#3cbe71</item>
+    <item name="blue" type="color">#0390dc</item>
+    <color name="transparent">#00000000</color>
+    <!-- card colors -->
+    <color name="card_background">#ffffff</color>
+    <color name="card_shadow_1">#d4d4d4</color>
+    <color name="card_shadow_2">#dddddd</color>
+    <color name="card_detailing">#eee</color>
+</resources>

@@ -1,0 +1,45 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.0 rc3"
+
+    defaultConfig {
+        applicationId "com.myaccountant.myaccountant"
+        minSdkVersion 19
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        packagingOptions{
+            exclude 'META-INF/LICENSE.txt'
+            exclude 'META-INF/NOTICE.txt'
+        }
+    }
+}
+
+dependencies {
+    //compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile files("libs/httpclient-4.2.3.jar")
+    compile files("libs/httpcore-4.2.jar")
+    compile 'com.android.support:appcompat-v7:23.0.1'
+    compile 'com.github.florent37:materialtextfield:1.0.1@aar'
+    compile 'com.android.support:cardview-v7:23.0.1'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.github.arcadefire:nice-spinner:d65f4fe052'
+    compile 'info.hoang8f:fbutton:1.0.5'
+    compile 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+    compile 'com.github.rey5137:material:1.2.1'
+    compile 'com.astuetz:pagerslidingtabstrip:1.0.1'
+    compile 'net.redwarp.android.library:lazy-database:0.2.1'
+    compile 'com.rengwuxian.materialedittext:library:2.1.4'
+    compile 'com.github.PhilJay:MPAndroidChart:v2.1.6'
+    compile 'com.github.fenjuly:ToggleExpandLayout:774e497692'
+    compile 'com.parse.bolts:bolts-android:1.+'
+    compile 'com.parse:parse-android:1.+'
+}

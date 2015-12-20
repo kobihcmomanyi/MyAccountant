@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">My Accountant</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_bio_data">BioDataActivity</string>
+    <string name="title_activity_assets">AssetsActivity</string>
+    <string name="title_activity_liabilities">Liabilities</string>
+    <string name="title_activity_capital">CapitalActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_create_account">CreateAccountActivity</string>
+
+    <array name="hours">
+        <item>30 min</item>
+        <item >1 hour</item>
+        <item >2 hours</item>
+        <item >4 hours</item>
+        <item >6 hours</item>
+    </array>
+
+    <array name="dataset">
+        <item>Ordinary Shares</item>
+        <item >Preference shares</item>
+        <item >Other</item>
+    </array>
+
+    <string name="title_activity_consultant_list">ConsultantList</string>
+    <string name="title_activity_actual_chat">ActualChat</string>
+    <string name="title_activity_make_payment">MakePayment</string>
+    <string name="title_activity_company">Company</string>
+    <string name="title_activity_sole_proprietorship">Sole Proprietorship</string>
+    <string name="title_activity_partnership">Partnership</string>
+</resources>
