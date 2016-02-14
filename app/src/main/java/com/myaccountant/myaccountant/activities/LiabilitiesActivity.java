@@ -1,6 +1,7 @@
 package com.myaccountant.myaccountant.activities;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
@@ -17,6 +18,7 @@ import com.myaccountant.myaccountant.fragments.CurrentAssetsFragment;
 import com.myaccountant.myaccountant.fragments.CurrentLiabilityFragment;
 import com.myaccountant.myaccountant.fragments.NonCurrentAssetsFragment;
 import com.myaccountant.myaccountant.fragments.NonCurrentLiabilityFragment;
+import com.readystatesoftware.systembartint.SystemBarTintManager;
 
 public class LiabilitiesActivity extends AppCompatActivity {
 
@@ -31,6 +33,14 @@ public class LiabilitiesActivity extends AppCompatActivity {
 
         getSupportActionBar().setTitle("Liabilities");
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.blue)));
+        //status bar and navigation bar styling
+        SystemBarTintManager tintManager=new SystemBarTintManager(this);
+        //status bar tint enable and styling
+        tintManager.setStatusBarTintEnabled(true);
+        tintManager.setStatusBarTintColor(Color.parseColor("#0390dc"));
+        //navigation bar tint enable and styling
+        tintManager.setNavigationBarTintEnabled(true);
+        tintManager.setNavigationBarTintColor(Color.parseColor("#00000000"));
 
         viewPager=(ViewPager)findViewById(R.id.view_pager);
         pagerSlidingTabStrip=(PagerSlidingTabStrip)findViewById(R.id.pager_title_strip);

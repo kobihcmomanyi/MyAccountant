@@ -24,6 +24,9 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_centerHorizontal="true"
+            android:maxLines="1"
+            android:maxLength="15"
+            android:ellipsize="end"
             android:id="@+id/row_one_name_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />

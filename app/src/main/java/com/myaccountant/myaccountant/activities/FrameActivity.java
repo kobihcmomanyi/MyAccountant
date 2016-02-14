@@ -1,5 +1,6 @@
 package com.myaccountant.myaccountant.activities;
 
+import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -35,6 +36,7 @@ import com.myaccountant.myaccountant.fragments.SCFFragment;
 import com.myaccountant.myaccountant.fragments.SFPFragment;
 import com.myaccountant.myaccountant.fragments.SalesFragment;
 import com.myaccountant.myaccountant.fragments.SalesListFragment;
+import com.readystatesoftware.systembartint.SystemBarTintManager;
 
 /**
  * Created by user on 11/8/2015.
@@ -46,6 +48,8 @@ public class FrameActivity extends AppCompatActivity {
 
     String category="";
     Fragment fragment=null;
+
+    SystemBarTintManager tintManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,84 +70,212 @@ public class FrameActivity extends AppCompatActivity {
                 fragment=new BusinessInfoFragment();
                 getSupportActionBar().setTitle("Business Info");
                 getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.blue)));
+                //status bar and navigation bar styling
+                SystemBarTintManager tintManager=new SystemBarTintManager(this);
+                //status bar tint enable and styling
+                tintManager.setStatusBarTintEnabled(true);
+                tintManager.setStatusBarTintColor(Color.parseColor("#0390dc"));
+                //navigation bar tint enable and styling
+                tintManager.setNavigationBarTintEnabled(true);
+                tintManager.setNavigationBarTintColor(Color.parseColor("#00000000"));
                 break;
             case "sales":
                 fragment=new SalesListFragment();
                 getSupportActionBar().setTitle("Sales");
                 getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.fbutton_color_emerald)));
+                //status bar and navigation bar styling
+                tintManager=new SystemBarTintManager(this);
+                //status bar tint enable and styling
+                tintManager.setStatusBarTintEnabled(true);
+                tintManager.setStatusBarTintColor(Color.parseColor("#2ecc71"));
+                //navigation bar tint enable and styling
+                tintManager.setNavigationBarTintEnabled(true);
+                tintManager.setNavigationBarTintColor(Color.parseColor("#00000000"));
                 break;
             case "purchases":
                 fragment=new PurchaseListFragment();
                 getSupportActionBar().setTitle("Purchases");
                 getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.blue)));
+                //status bar and navigation bar styling
+                tintManager=new SystemBarTintManager(this);
+                //status bar tint enable and styling
+                tintManager.setStatusBarTintEnabled(true);
+                tintManager.setStatusBarTintColor(Color.parseColor("#0390dc"));
+                //navigation bar tint enable and styling
+                tintManager.setNavigationBarTintEnabled(true);
+                tintManager.setNavigationBarTintColor(Color.parseColor("#00000000"));
                 break;
             case "expenses":
                 fragment=new ExpensesListFragment();
                 getSupportActionBar().setTitle("Expenses");
                 getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.fbutton_color_alizarin)));
+                //status bar and navigation bar styling
+                tintManager=new SystemBarTintManager(this);
+                //status bar tint enable and styling
+                tintManager.setStatusBarTintEnabled(true);
+                tintManager.setStatusBarTintColor(Color.parseColor("#e74c3c"));
+                //navigation bar tint enable and styling
+                tintManager.setNavigationBarTintEnabled(true);
+                tintManager.setNavigationBarTintColor(Color.parseColor("#00000000"));
                 break;
             case "otherIncome":
                 fragment=new OtherIncomeListFragment();
                 getSupportActionBar().setTitle("Other Income");
                 getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.fbutton_color_emerald)));
+                //status bar and navigation bar styling
+                tintManager=new SystemBarTintManager(this);
+                //status bar tint enable and styling
+                tintManager.setStatusBarTintEnabled(true);
+                tintManager.setStatusBarTintColor(Color.parseColor("#2ecc71"));
+                //navigation bar tint enable and styling
+                tintManager.setNavigationBarTintEnabled(true);
+                tintManager.setNavigationBarTintColor(Color.parseColor("#00000000"));
                 break;
             case "progressReport":
                 fragment=new ProgressReportFragment();
                 getSupportActionBar().setTitle("Progress Report");
                 getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.secondary_color)));
+                //status bar and navigation bar styling
+                tintManager=new SystemBarTintManager(this);
+                //status bar tint enable and styling
+                tintManager.setStatusBarTintEnabled(true);
+                tintManager.setStatusBarTintColor(Color.parseColor("#363644"));
+                //navigation bar tint enable and styling
+                tintManager.setNavigationBarTintEnabled(true);
+                tintManager.setNavigationBarTintColor(Color.parseColor("#00000000"));
                 break;
             case "faqs":
                 fragment=new FaqsFragment();
                 getSupportActionBar().setTitle("FAQs");
                 getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.secondary_color)));
+                //status bar and navigation bar styling
+                tintManager=new SystemBarTintManager(this);
+                //status bar tint enable and styling
+                tintManager.setStatusBarTintEnabled(true);
+                tintManager.setStatusBarTintColor(Color.parseColor("#363644"));
+                //navigation bar tint enable and styling
+                tintManager.setNavigationBarTintEnabled(true);
+                tintManager.setNavigationBarTintColor(Color.parseColor("#00000000"));
                 break;
             case "feedback":
                 fragment=new FeedbackFragment();
                 getSupportActionBar().setTitle("Feedback");
                 getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.secondary_color)));
+                //status bar and navigation bar styling
+                tintManager=new SystemBarTintManager(this);
+                //status bar tint enable and styling
+                tintManager.setStatusBarTintEnabled(true);
+                tintManager.setStatusBarTintColor(Color.parseColor("#363644"));
+                //navigation bar tint enable and styling
+                tintManager.setNavigationBarTintEnabled(true);
+                tintManager.setNavigationBarTintColor(Color.parseColor("#00000000"));
                 break;
             case "bioData":
                 fragment=new BioDataFragment();
                 getSupportActionBar().setTitle("Bio Data");
                 getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.blue)));
+                //status bar and navigation bar styling
+                tintManager=new SystemBarTintManager(this);
+                //status bar tint enable and styling
+                tintManager.setStatusBarTintEnabled(true);
+                tintManager.setStatusBarTintColor(Color.parseColor("#0390dc"));
+                //navigation bar tint enable and styling
+                tintManager.setNavigationBarTintEnabled(true);
+                tintManager.setNavigationBarTintColor(Color.parseColor("#00000000"));
                 break;
             case "currentAssets":
                 fragment=new CurrentAssetsFragment();
                 getSupportActionBar().setTitle("Current Assets");
                 getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.blue)));
+                //status bar and navigation bar styling
+                tintManager=new SystemBarTintManager(this);
+                //status bar tint enable and styling
+                tintManager.setStatusBarTintEnabled(true);
+                tintManager.setStatusBarTintColor(Color.parseColor("#0390dc"));
+                //navigation bar tint enable and styling
+                tintManager.setNavigationBarTintEnabled(true);
+                tintManager.setNavigationBarTintColor(Color.parseColor("#00000000"));
                 break;
             case "nonCurrentAssets":
                 fragment=new NonCurrentAssetsFragment();
                 getSupportActionBar().setTitle("Non Current Assets");
                 getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.blue)));
+                //status bar and navigation bar styling
+                tintManager=new SystemBarTintManager(this);
+                //status bar tint enable and styling
+                tintManager.setStatusBarTintEnabled(true);
+                tintManager.setStatusBarTintColor(Color.parseColor("#0390dc"));
+                //navigation bar tint enable and styling
+                tintManager.setNavigationBarTintEnabled(true);
+                tintManager.setNavigationBarTintColor(Color.parseColor("#00000000"));
                 break;
             case "currentLiabilities":
                 fragment=new CurrentLiabilityFragment();
                 getSupportActionBar().setTitle("Current Liabilities");
                 getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.blue)));
+                //status bar and navigation bar styling
+                tintManager=new SystemBarTintManager(this);
+                //status bar tint enable and styling
+                tintManager.setStatusBarTintEnabled(true);
+                tintManager.setStatusBarTintColor(Color.parseColor("#0390dc"));
+                //navigation bar tint enable and styling
+                tintManager.setNavigationBarTintEnabled(true);
+                tintManager.setNavigationBarTintColor(Color.parseColor("#00000000"));
                 break;
             case "nonCurrentLiabilities":
                 fragment=new NonCurrentLiabilityFragment();
                 getSupportActionBar().setTitle("Non Current Liabilities");
                 getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.blue)));
+                //status bar and navigation bar styling
+                tintManager=new SystemBarTintManager(this);
+                //status bar tint enable and styling
+                tintManager.setStatusBarTintEnabled(true);
+                tintManager.setStatusBarTintColor(Color.parseColor("#0390dc"));
+                //navigation bar tint enable and styling
+                tintManager.setNavigationBarTintEnabled(true);
+                tintManager.setNavigationBarTintColor(Color.parseColor("#00000000"));
                 break;
             case "isReport":
                 fragment=new IncomeStatementFragment();
                 getSupportActionBar().setTitle("Progress Report");
                 getSupportActionBar().setSubtitle("Income Statement");
                 getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.secondary_color)));
+                //status bar and navigation bar styling
+                tintManager=new SystemBarTintManager(this);
+                //status bar tint enable and styling
+                tintManager.setStatusBarTintEnabled(true);
+                tintManager.setStatusBarTintColor(Color.parseColor("#363644"));
+                //navigation bar tint enable and styling
+                tintManager.setNavigationBarTintEnabled(true);
+                tintManager.setNavigationBarTintColor(Color.parseColor("#00000000"));
                 break;
             case "sfpReport":
                 fragment=new SFPFragment();
                 getSupportActionBar().setTitle("Progress Report");
                 getSupportActionBar().setSubtitle("Statement of Financial Position");
                 getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.secondary_color)));
+                //status bar and navigation bar styling
+                tintManager=new SystemBarTintManager(this);
+                //status bar tint enable and styling
+                tintManager.setStatusBarTintEnabled(true);
+                tintManager.setStatusBarTintColor(Color.parseColor("#363644"));
+                //navigation bar tint enable and styling
+                tintManager.setNavigationBarTintEnabled(true);
+                tintManager.setNavigationBarTintColor(Color.parseColor("#00000000"));
                 break;
             case "scfReport":
                 fragment=new SCFFragment();
                 getSupportActionBar().setTitle("Progress Report");
                 getSupportActionBar().setSubtitle("Statement of Cash Flow");
                 getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.secondary_color)));
+                //status bar and navigation bar styling
+                tintManager=new SystemBarTintManager(this);
+                //status bar tint enable and styling
+                tintManager.setStatusBarTintEnabled(true);
+                tintManager.setStatusBarTintColor(Color.parseColor("#363644"));
+                //navigation bar tint enable and styling
+                tintManager.setNavigationBarTintEnabled(true);
+                tintManager.setNavigationBarTintColor(Color.parseColor("#00000000"));
                 break;
             default:
                 break;
@@ -183,30 +315,70 @@ public class FrameActivity extends AppCompatActivity {
                         getSupportActionBar().setTitle("Business Info");
                         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.blue)));
                         category="businessInfo";
+                        //status bar and navigation bar styling
+                        tintManager=new SystemBarTintManager(FrameActivity.this);
+                        //status bar tint enable and styling
+                        tintManager.setStatusBarTintEnabled(true);
+                        tintManager.setStatusBarTintColor(Color.parseColor("#0390dc"));
+                        //navigation bar tint enable and styling
+                        tintManager.setNavigationBarTintEnabled(true);
+                        tintManager.setNavigationBarTintColor(Color.parseColor("#00000000"));
                         break;
                     case 1:
                         fragment=new SalesListFragment();
                         getSupportActionBar().setTitle("Sales");
                         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.fbutton_color_emerald)));
                         category="sales";
+                        //status bar and navigation bar styling
+                        tintManager=new SystemBarTintManager(FrameActivity.this);
+                        //status bar tint enable and styling
+                        tintManager.setStatusBarTintEnabled(true);
+                        tintManager.setStatusBarTintColor(Color.parseColor("#2ecc71"));
+                        //navigation bar tint enable and styling
+                        tintManager.setNavigationBarTintEnabled(true);
+                        tintManager.setNavigationBarTintColor(Color.parseColor("#00000000"));
                         break;
                     case 2:
                         fragment=new PurchaseListFragment();
                         getSupportActionBar().setTitle("Purchase");
                         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.blue)));
                         category="purchases";
+                        //status bar and navigation bar styling
+                        tintManager=new SystemBarTintManager(FrameActivity.this);
+                        //status bar tint enable and styling
+                        tintManager.setStatusBarTintEnabled(true);
+                        tintManager.setStatusBarTintColor(Color.parseColor("#0390dc"));
+                        //navigation bar tint enable and styling
+                        tintManager.setNavigationBarTintEnabled(true);
+                        tintManager.setNavigationBarTintColor(Color.parseColor("#00000000"));
                         break;
                     case 3:
                         fragment=new ExpensesListFragment();
                         getSupportActionBar().setTitle("Expenses");
                         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.fbutton_color_alizarin)));
                         category="expenses";
+                        //status bar and navigation bar styling
+                        tintManager=new SystemBarTintManager(FrameActivity.this);
+                        //status bar tint enable and styling
+                        tintManager.setStatusBarTintEnabled(true);
+                        tintManager.setStatusBarTintColor(Color.parseColor("#e74c3c"));
+                        //navigation bar tint enable and styling
+                        tintManager.setNavigationBarTintEnabled(true);
+                        tintManager.setNavigationBarTintColor(Color.parseColor("#00000000"));
                         break;
                     case 4:
                         fragment=new OtherIncomeListFragment();
                         getSupportActionBar().setTitle("Other Income");
                         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.fbutton_color_emerald)));
                         category="otherIncome";
+                        //status bar and navigation bar styling
+                        tintManager=new SystemBarTintManager(FrameActivity.this);
+                        //status bar tint enable and styling
+                        tintManager.setStatusBarTintEnabled(true);
+                        tintManager.setStatusBarTintColor(Color.parseColor("#2ecc71"));
+                        //navigation bar tint enable and styling
+                        tintManager.setNavigationBarTintEnabled(true);
+                        tintManager.setNavigationBarTintColor(Color.parseColor("#00000000"));
                         break;
                     case 5:
                         //fragment=new ProgressReportFragment();

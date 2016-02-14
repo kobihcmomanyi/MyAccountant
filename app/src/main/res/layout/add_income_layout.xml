@@ -7,10 +7,17 @@
     xmlns:fbutton="http://schemas.android.com/tools">
 
     <LinearLayout
-        android:layout_margin="5dp"
+        android:layout_margin="8dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
         <TextView
             android:textStyle="bold"
             android:layout_marginBottom="5dp"
@@ -18,10 +25,24 @@
             android:text="select category into which income falls"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+        <View
+            android:background="@color/fbutton_color_silver"
+            android:layout_height="1dp"
+            android:layout_width="match_parent"/>
         <org.angmarch.views.NiceSpinner
             android:id="@+id/add_income_category_spinner"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"/>
+        </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/add_income_name"
             android:layout_width="match_parent"
@@ -60,10 +81,11 @@
             app:met_clearButton="true"
             app:met_helperText="enter numbers only"
             android:hint="Amount"/>
-
+        </LinearLayout>
+        </android.support.v7.widget.CardView>
         <com.rey.material.widget.Button
             android:id="@+id/save_btn"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             android:layout_marginLeft="0dp"
             android:layout_marginRight="0dp"
             android:layout_marginBottom="50dp"
@@ -76,5 +98,6 @@
             android:textStyle="bold"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"/>
+
     </LinearLayout>
 </ScrollView>

@@ -3,6 +3,8 @@ package com.myaccountant.myaccountant.activities;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -24,9 +26,11 @@ import com.myaccountant.myaccountant.helpers.NetworkHandler;
 import com.parse.LogOutCallback;
 import com.parse.ParseException;
 import com.parse.ParseUser;
+import com.readystatesoftware.systembartint.SystemBarTintManager;
 import com.rey.material.app.Dialog;
 import com.rey.material.widget.CheckBox;
 import com.rey.material.widget.EditText;
+import com.rey.material.widget.FloatingActionButton;
 
 import net.redwarp.library.database.DatabaseHelper;
 
@@ -38,7 +42,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     ImageView business_info,sales,purchases,expenses,other_income,progress_report,faqs,feedback, logout;
-    TextView createAccount;
+    View createAccount;
     ProgressDialog pd;
     ProgressBar home_progress_bar;
 
@@ -72,8 +76,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        getSupportActionBar().hide();
+        setContentView(R.layout.activity_new_main);
+
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#99000000")));
+        getSupportActionBar().setTitle("");
+
         pd=new ProgressDialog(this);
         //init views
         business_info=(ImageView)findViewById(R.id.business_info);
@@ -85,10 +92,17 @@ public class MainActivity extends AppCompatActivity {
         faqs=(ImageView)findViewById(R.id.faqs);
         feedback=(ImageView)findViewById(R.id.feedback);
         logout =(ImageView)findViewById(R.id.logout);
-        createAccount=(TextView)findViewById(R.id.createAccountText);
+        createAccount=(FloatingActionButton)findViewById(R.id.signUpButton);
         home_progress_bar = (ProgressBar) findViewById(R.id.home_progress_bar);
         home_progress_bar.setVisibility(View.INVISIBLE);
-
+        //status bar and navigation bar styling
+        SystemBarTintManager tintManager=new SystemBarTintManager(this);
+        //status bar tint enable and styling
+        tintManager.setStatusBarTintEnabled(true);
+        tintManager.setStatusBarTintColor(Color.parseColor("#3cbe71"));
+        //navigation bar tint enable and styling
+        tintManager.setNavigationBarTintEnabled(true);
+        tintManager.setNavigationBarTintColor(Color.parseColor("#00000000"));
 
 //        createAccountDialog();
 
@@ -205,7 +219,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
+        return false;
     }
 
     @Override
@@ -217,7 +231,7 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            return false;
         }
 
         return super.onOptionsItemSelected(item);

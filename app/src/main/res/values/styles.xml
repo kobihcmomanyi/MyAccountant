@@ -5,6 +5,10 @@
         <!-- Customize your theme here. -->
         <!--remove shadow from actionbar-->
         <item name="android:windowContentOverlay">@null</item>
+        <!--translucent status bar and navigation bar-->
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <!--fitSystemWindow and clipToPadding-->
     </style>
 
 

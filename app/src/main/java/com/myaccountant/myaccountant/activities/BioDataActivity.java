@@ -1,6 +1,7 @@
 package com.myaccountant.myaccountant.activities;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -17,6 +18,7 @@ import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
+import com.readystatesoftware.systembartint.SystemBarTintManager;
 
 public class BioDataActivity extends AppCompatActivity {
     private TextView name_tv, size_tv,location_tv,structure_tv, description_tv;
@@ -30,6 +32,14 @@ public class BioDataActivity extends AppCompatActivity {
 
         getSupportActionBar().setTitle("Bio Data");
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.blue)));
+        //status bar and navigation bar styling
+        SystemBarTintManager tintManager=new SystemBarTintManager(this);
+        //status bar tint enable and styling
+        tintManager.setStatusBarTintEnabled(true);
+        tintManager.setStatusBarTintColor(Color.parseColor("#0390dc"));
+        //navigation bar tint enable and styling
+        tintManager.setNavigationBarTintEnabled(true);
+        tintManager.setNavigationBarTintColor(Color.parseColor("#00000000"));
 
         name_tv = (TextView) findViewById(R.id.name_tv);
         size_tv = (TextView) findViewById(R.id.size_tv);
